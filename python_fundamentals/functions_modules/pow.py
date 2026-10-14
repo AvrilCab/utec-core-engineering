@@ -5,6 +5,6 @@ def pow(a, b):
     for i in range(b):
         result = result * a
 
-    if b < 0
+    if b < 0:
         return 1 / result
     return result
