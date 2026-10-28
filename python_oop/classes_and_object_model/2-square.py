@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""Este modulo define una clase Square con validacion de tamano"""
+
+
+class Square:
+    """Representa un cuadrado con validaciones de tamano"""
+
+    def __init__(self, size=0):
+        """inicia un nuevo cuadrado
+
+        Args:
+             size (int): el tamano del cuadrado(por defecto 0)
+
+        """
+
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+
+        self.__size = size
