@@ -33,8 +33,8 @@ class Square:
 
         return self.__size ** 2
 
-    def print(self):
-        """imprime en stdout el cuadrado utilizando el caracter '#'.""" 
+    def my_print(self):
+        """imprime en stdout el cuadrado utilizando el caracter '#'."""
         if self.__size == 0:
             print("")
             return
