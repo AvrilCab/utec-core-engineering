@@ -32,12 +32,12 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """Establece la posición del cuadrado."""
-        if (not isinstance(value, tuple) or len(value) != 2 or
-                not isinstance(value[0], int) or not isinstance(value[1], int) or
-                isinstance(value[0], bool) or isinstance(value[1], bool) or
-                value[0] < 0 or value[1] < 0):
-            raise TypeError("position must be a tuple of 2 positive integers")
+        """Establece la posicion cuadrado."""
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
+            raise TypeError("position must be a tuple of 2 positive integer")
         self.__position = value
 
     def area(self):
@@ -47,22 +47,19 @@ class Square:
 
     def my_print(self):
         """imprime el cuadrado"""
+        print(self.__str__())
+
+    def __str__(self):
+        """define la represenacion en cdena del cuadrado"""
         if self.__size == 0:
-            print("")
-            return
+            return ""
 
-        print("\n" * self.position[1], end="")
-        for _ in range(self.__size):
-            print(' ' * self.position[0] + '#' * sel.__size)
+        square_sr = []
+        square_str.append("\n" + self.position[1])
 
-        def __str__(self):
-            """define la represenacion en cdena del cuadrado"""
-            if self.__size == 0:
-                return ""
+        for i in range(self.__size):
+            square_str.append(" " * self.__position[0] + "#" * self.__size)
+            if i < self.__size - 1:
+                square_str.append("\n")
 
-            result = "\n" * self.position[1]
-            for i in range(self.__size):
-                result += " " * self.position[0] + "#" * self.size
-                if i < self.__size - 1:
-                    result += "\n"
-            return result
+        return "".join(square_str)
