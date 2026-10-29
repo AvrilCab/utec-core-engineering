@@ -59,7 +59,7 @@ class Square:
             if self.__size == 0:
                 return ""
 
-            return = "\n" * self.position[1]
+            result = "\n" * self.position[1]
             for i in range(self.__size):
                 result += " " * self.position[0] + "#" * self.size
                 if i < self.__size - 1
