@@ -31,12 +31,13 @@ class Square:
         return self.__position
 
     @position.setter
-    def positiom(self, value):
-        """establece la posicion del cuadrado"""
+    def position(self, value):
+        """Establece la posición del cuadrado."""
         if (not isinstance(value, tuple) or len(value) != 2 or
-                not all(isinstance(num, int) for num in value) or
-                not all(num >= 0for num in value)):
-            raise TypeError("position mus be a tuple os 2 positive integers")
+                not isinstance(value[0], int) or not isinstance(value[1], int) or
+                isinstance(value[0], bool) or isinstance(value[1], bool) or
+                value[0] < 0 or value[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
