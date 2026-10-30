@@ -14,5 +14,5 @@ class Square(Rectangle):
         self.__size = size
 
     def __str__(self):
-       """devuelve la representacion del cuadrado en una cadena"""
-       return f"[Square] {self.__size}/{self.__size}"
+        """devuelve la representacion del cuadrado en una cadena"""
+        return f"[Square] {self.__size}/{self.__size}"
