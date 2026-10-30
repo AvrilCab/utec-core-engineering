@@ -2,6 +2,7 @@
 
 """modulo que define la clase Rectangle"""
 
+
 class Rectangle:
     """representa un rectangulo"""
     def __init__(self, width=0, height=0):
