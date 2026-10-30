@@ -15,4 +15,4 @@ class Square(Rectangle):
 
     def __str__(self):
        """devuelve la representacion del cuadrado en una cadena"""
-       return f"[Square] {self.__size}/{self.__size}
+       return f"[Square] {self.__size}/{self.__size}"
