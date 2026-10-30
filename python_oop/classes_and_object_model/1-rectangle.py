@@ -8,7 +8,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """inicia un rectangulo
         args:
-        width (int): ancho 
+        width (int): ancho
         height (int): altura
         """
 
@@ -42,4 +42,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
